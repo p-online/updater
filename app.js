@@ -16,7 +16,7 @@ function updateNode(){
 		currentNode.kill();
 		running = false;
 	}
-	var execResult = execSync.run('sh update.sh');
+	var execResult = execSync.run('repo sync');
 	console.log(execResult);
 	var currentNode = exec.fork('../p-server/');
 	var nodeLog = currentNode.stdout;
